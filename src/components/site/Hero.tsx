@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { ArrowRight, Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const PROFILE_URL = "https://i.postimg.cc/Dz76zk6X/Arvind-Maurya.png";
+const PROFILE_URL = "/Images/profile.jpeg";
 
 export function Hero() {
   return (
@@ -128,6 +128,8 @@ export function Hero() {
                 alt="Gen91Studio founder and creative director"
                 width={1024}
                 height={1024}
+                loading="eager"
+                decoding="async"
                 className="h-full w-full scale-105 object-cover grayscale transition-all duration-700 group-hover:scale-100 group-hover:grayscale-0"
               />
               <div
