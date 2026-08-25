@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "./data";
@@ -9,6 +9,7 @@ import logoAsset from "@/assets/alogo.png";
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -16,6 +17,28 @@ export function Nav() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const handleMobileNavClick = (hash: string) => {
+    setOpen(false);
+    if (pathname === "/" || pathname === "") {
+      setTimeout(() => {
+        const el = document.getElementById(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+          window.history.pushState(null, "", `#${hash}`);
+        }
+      }, 260);
+    }
+  };
+
+  const handleDesktopNavClick = (hash: string) => {
+    if (pathname === "/" || pathname === "") {
+      const el = document.getElementById(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <header
@@ -26,7 +49,11 @@ export function Nav() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
         <Link
           to="/"
-          hash="top"
+          hash="about"
+          onClick={() => {
+            if (open) setOpen(false);
+            handleDesktopNavClick("about");
+          }}
           aria-label="Gen91 Studio — Arvind Maurya Design House Home"
           className="flex shrink-0 items-center py-2"
         >
@@ -41,22 +68,26 @@ export function Nav() {
         </Link>
 
         <ul className="hidden items-center gap-7 lg:flex">
-          {NAV_LINKS.map((link) => (
-            <li key={link.label}>
-              <Link
-                to="/"
-                hash={link.hash || link.href.replace(/^.*#/, "")}
-                className="relative text-sm text-muted-foreground transition-colors hover:text-foreground after:absolute after:-bottom-1.5 after:left-0 after:h-[2px] after:w-full after:origin-right after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const targetHash = link.hash || link.href.replace(/^.*#/, "");
+            return (
+              <li key={link.label}>
+                <Link
+                  to="/"
+                  hash={targetHash}
+                  onClick={() => handleDesktopNavClick(targetHash)}
+                  className="relative text-sm text-muted-foreground transition-colors hover:text-foreground after:absolute after:-bottom-1.5 after:left-0 after:h-[2px] after:w-full after:origin-right after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         <div className="flex shrink-0 items-center justify-end gap-2">
           <Button asChild variant="hero" size="sm" className="hidden sm:inline-flex">
-            <Link to="/" hash="contact">
+            <Link to="/" hash="contact" onClick={() => handleDesktopNavClick("contact")}>
               Let's Talk
             </Link>
           </Button>
@@ -83,22 +114,25 @@ export function Nav() {
           >
             <div className="mx-4 mt-3 rounded-2xl border border-border/80 bg-popover/95 p-3 backdrop-blur-2xl shadow-2xl sm:mx-8">
               <ul className="grid gap-1">
-                {NAV_LINKS.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      to="/"
-                      hash={link.hash || link.href.replace(/^.*#/, "")}
-                      onClick={() => setOpen(false)}
-                      className="block rounded-xl px-4 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground active:bg-secondary/80"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                {NAV_LINKS.map((link) => {
+                  const targetHash = link.hash || link.href.replace(/^.*#/, "");
+                  return (
+                    <li key={link.label}>
+                      <Link
+                        to="/"
+                        hash={targetHash}
+                        onClick={() => handleMobileNavClick(targetHash)}
+                        className="block rounded-xl px-4 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground active:bg-secondary/80"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
               <div className="mt-3 pt-3 border-t border-border/60">
                 <Button asChild variant="hero" size="lg" className="w-full rounded-xl font-bold">
-                  <Link to="/" hash="contact" onClick={() => setOpen(false)}>
+                  <Link to="/" hash="contact" onClick={() => handleMobileNavClick("contact")}>
                     Let's Talk
                   </Link>
                 </Button>

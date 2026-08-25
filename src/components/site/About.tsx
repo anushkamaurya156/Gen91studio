@@ -2,6 +2,51 @@ import { motion } from "motion/react";
 import { STATS, SKILLS, EXPERTISE } from "./data";
 import { Counter, Reveal, SectionHeading, SectionLabel } from "./motion-kit";
 
+function SkillRow({
+  name,
+  level,
+  delay = 0,
+}: {
+  name: string;
+  level: number;
+  delay?: number;
+}) {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={{
+        hidden: { opacity: 0, y: 16 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] },
+        },
+      }}
+      className="group"
+    >
+      <div className="flex items-center justify-between">
+        <span className="font-display text-xs sm:text-sm font-bold tracking-wide uppercase">
+          {name}
+        </span>
+      </div>
+      <div className="mt-2 h-1 overflow-hidden rounded-full bg-secondary">
+        <motion.div
+          className="bg-ember h-full origin-left rounded-full"
+          variants={{
+            hidden: { scaleX: 0 },
+            visible: {
+              scaleX: level / 100,
+              transition: { duration: 1.0, delay: delay + 0.08, ease: [0.22, 1, 0.36, 1] },
+            },
+          }}
+        />
+      </div>
+    </motion.div>
+  );
+}
+
 export function About() {
   return (
     <section id="about" className="section-pad relative">
@@ -80,22 +125,12 @@ export function Skills() {
             </h3>
             <div className="grid gap-y-5 sm:gap-y-7">
               {SKILLS.map((skill, i) => (
-                <Reveal key={skill.name} delay={i * 0.03}>
-                  <div className="group">
-                    <span className="font-display text-xs sm:text-sm font-bold tracking-wide uppercase">
-                      {skill.name}
-                    </span>
-                    <div className="mt-2 h-1 overflow-hidden rounded-full bg-secondary">
-                      <motion.div
-                        className="bg-ember h-full origin-left rounded-full"
-                        initial={{ scaleX: 0 }}
-                        whileInView={{ scaleX: skill.level / 100 }}
-                        viewport={{ once: true, margin: "-60px" }}
-                        transition={{ duration: 1.1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-                      />
-                    </div>
-                  </div>
-                </Reveal>
+                <SkillRow
+                  key={skill.name}
+                  name={skill.name}
+                  level={skill.level}
+                  delay={i * 0.03}
+                />
               ))}
             </div>
           </div>
@@ -108,22 +143,12 @@ export function Skills() {
             </h3>
             <div className="grid gap-y-5 sm:gap-y-7">
               {EXPERTISE.map((item, i) => (
-                <Reveal key={item.name} delay={i * 0.03}>
-                  <div className="group">
-                    <span className="font-display text-xs sm:text-sm font-bold tracking-wide uppercase">
-                      {item.name}
-                    </span>
-                    <div className="mt-2 h-1 overflow-hidden rounded-full bg-secondary">
-                      <motion.div
-                        className="bg-ember h-full origin-left rounded-full"
-                        initial={{ scaleX: 0 }}
-                        whileInView={{ scaleX: item.level / 100 }}
-                        viewport={{ once: true, margin: "-60px" }}
-                        transition={{ duration: 1.1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-                      />
-                    </div>
-                  </div>
-                </Reveal>
+                <SkillRow
+                  key={item.name}
+                  name={item.name}
+                  level={item.level}
+                  delay={i * 0.03}
+                />
               ))}
             </div>
           </div>

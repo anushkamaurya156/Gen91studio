@@ -71,24 +71,27 @@ function Index() {
         } else {
           const timer = setTimeout(() => {
             document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-          }, 150);
+          }, 200);
           return () => clearTimeout(timer);
         }
       }
     };
 
-    scrollToHash();
+    const initialTimer = setTimeout(scrollToHash, 100);
     window.addEventListener("hashchange", scrollToHash);
-    return () => window.removeEventListener("hashchange", scrollToHash);
+    return () => {
+      clearTimeout(initialTimer);
+      window.removeEventListener("hashchange", scrollToHash);
+    };
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
+    <div className="relative min-h-screen overflow-x-hidden w-full max-w-full">
       <Loader />
       <ScrollProgress />
       <CursorGlow />
       <Nav />
-      <main className="relative z-10">
+      <main className="relative z-10 w-full max-w-full">
         <Hero />
         <About />
         <Skills />

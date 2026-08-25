@@ -38,7 +38,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="section-pad relative bg-surface/40">
+    <section id="contact" className="section-pad relative bg-surface/40 overflow-hidden w-full max-w-full">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Contact"
@@ -50,8 +50,8 @@ export function Contact() {
           subtitle="Tell us what you are building. We will help you find the right visual direction."
         />
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal>
+        <div className="mt-16 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] w-full max-w-full">
+          <Reveal className="min-w-0 w-full">
             <div className="grid h-full gap-3 sm:grid-cols-2 lg:grid-cols-1">
               {details.map(({ icon: Icon, label, value, href }) => {
                 const inner = (
@@ -78,10 +78,10 @@ export function Contact() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.1}>
-            <form onSubmit={onSubmit} className="glass-card rounded-3xl p-6 sm:p-8">
+          <Reveal delay={0.1} className="min-w-0 w-full">
+            <form onSubmit={onSubmit} className="glass-card rounded-3xl p-6 sm:p-8 w-full min-w-0 max-w-full">
               <div className="grid gap-4 sm:grid-cols-2">
-                <div>
+                <div className="min-w-0">
                   <label
                     htmlFor="name"
                     className="text-xs tracking-widest text-muted-foreground uppercase"
@@ -90,7 +90,7 @@ export function Contact() {
                   </label>
                   <Input id="name" name="name" required placeholder="Your name" className="mt-2" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <label
                     htmlFor="email"
                     className="text-xs tracking-widest text-muted-foreground uppercase"
@@ -107,7 +107,7 @@ export function Contact() {
                   />
                 </div>
               </div>
-              <div className="mt-4">
+              <div className="mt-4 min-w-0">
                 <label
                   htmlFor="subject"
                   className="text-xs tracking-widest text-muted-foreground uppercase"
@@ -116,7 +116,7 @@ export function Contact() {
                 </label>
                 <Input id="subject" name="subject" placeholder="Project enquiry" className="mt-2" />
               </div>
-              <div className="mt-4">
+              <div className="mt-4 min-w-0">
                 <label
                   htmlFor="message"
                   className="text-xs tracking-widest text-muted-foreground uppercase"
@@ -145,14 +145,14 @@ export function Contact() {
           </Reveal>
         </div>
 
-        <Reveal className="mt-6">
-          <div className="glass-card overflow-hidden rounded-3xl">
+        <Reveal className="mt-6 w-full min-w-0">
+          <div className="glass-card overflow-hidden rounded-3xl w-full max-w-full">
             <iframe
               title="Gen91 Studio location — Laxmibahen Chheda Marg, Nalasopara West, Maharashtra, India"
               src="https://www.google.com/maps?q=Laxmibahen+Chheda+Marg,+Nalasopara+West,+Maharashtra,+India&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="h-[320px] w-full grayscale-[0.6] contrast-125"
+              className="h-[320px] w-full max-w-full grayscale-[0.6] contrast-125 border-0"
             />
           </div>
         </Reveal>
