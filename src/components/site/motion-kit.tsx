@@ -159,7 +159,7 @@ export function Loader() {
 
   useEffect(() => {
     setMounted(true);
-    const t = setTimeout(() => setDone(true), 400);
+    const t = setTimeout(() => setDone(true), 5600);
     return () => clearTimeout(t);
   }, []);
 
@@ -170,21 +170,24 @@ export function Loader() {
       aria-hidden
       initial={{ opacity: 1 }}
       animate={{ opacity: 0 }}
-      transition={{ duration: 0.4, delay: 0.2 }}
+      transition={{ duration: 0.6, delay: 5.0, ease: "easeInOut" }}
       onAnimationComplete={() => setDone(true)}
       style={{ pointerEvents: "none" }}
       className="pointer-events-none fixed inset-0 z-[80] flex items-center justify-center bg-background"
     >
-      <div className="text-center">
-        <div className="font-display text-2xl font-extrabold tracking-[0.4em] text-foreground">
-          GEN91
+      <div className="flex flex-col items-center text-center">
+        <div className="font-display text-2xl sm:text-3xl font-black tracking-[0.3em] uppercase text-foreground">
+          GEN91 STUDIO
         </div>
-        <div className="mt-4 h-[2px] w-40 overflow-hidden rounded-full bg-secondary">
+        <div className="mt-1.5 font-display text-[10px] sm:text-xs font-semibold tracking-[0.45em] uppercase text-muted-foreground">
+          DESIGN HOUSE
+        </div>
+        <div className="mt-5 h-[2px] w-48 sm:w-56 overflow-hidden rounded-full bg-secondary">
           <motion.div
             className="bg-ember h-full w-full origin-left"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 5.0, ease: "easeInOut" }}
           />
         </div>
       </div>
