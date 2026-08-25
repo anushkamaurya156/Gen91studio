@@ -48,15 +48,15 @@ export const EXPERTISE = [
 ];
 
 export const SERVICE_CATEGORY_NAMES = [
-  "Pattern Design",
-  "Social Media Design",
-  "Tshirt Design",
-  "Visiting Card",
+  "3D Modeling",
+  "3D Rendering",
   "AI Image Generation",
+  "Banner Design",
   "Brand Identity & Visual Strategy",
   "Brand Identity Design",
   "Branding Projects",
   "Calendar",
+  "Calender",
   "Catalogue & Brochure Design",
   "Flyer",
   "Graphic Design",
@@ -65,8 +65,10 @@ export const SERVICE_CATEGORY_NAMES = [
   "Logo Designs",
   "Menu Card",
   "Packaging Design",
-  "3D Modeling",
-  "3D Rendering",
+  "Pattern Design",
+  "Social Media Design",
+  "Tshirt Design",
+  "Visiting Card",
 ] as const;
 
 export type CategoryMeta = {
@@ -82,12 +84,13 @@ export const CATEGORIES = [
   "3D Modeling",
   "3D Rendering",
   "AI Image Generation",
+  "Banner Design",
   "Brand Identity & Visual Strategy",
   "Brand Identity Design",
   "Branding Projects",
   "Calendar",
+  "Calender",
   "Catalogue & Brochure Design",
-  "Corporate Branding",
   "Flyer",
   "Graphic Design",
   "Illustrations",
@@ -129,6 +132,14 @@ export const CATEGORY_DEFINITIONS: CategoryMeta[] = [
     icon: "Wand2",
   },
   {
+    name: "Banner Design",
+    slug: "banner-design",
+    description:
+      "High-impact digital web banners, event backdrops, promotional hoardings, and outdoor billboard designs engineered for brand visibility.",
+    tools: ["Photoshop", "Illustrator", "CorelDRAW", "Canva Pro"],
+    icon: "LayoutTemplate",
+  },
+  {
     name: "Brand Identity & Visual Strategy",
     slug: "brand-identity-visual-strategy",
     description:
@@ -161,20 +172,20 @@ export const CATEGORY_DEFINITIONS: CategoryMeta[] = [
     icon: "CalendarIcon",
   },
   {
+    name: "Calender",
+    slug: "calender",
+    description:
+      "Custom thematic wall and desk calendar designs, datesheets, and branded corporate agendas crafted for print excellence.",
+    tools: ["InDesign", "Photoshop", "Illustrator"],
+    icon: "CalendarIcon",
+  },
+  {
     name: "Catalogue & Brochure Design",
     slug: "catalogue-brochure-design",
     description:
       "Multi-page technical catalogs, product brochures, specification sheets, and corporate company profiles with editorial hierarchy.",
     tools: ["Adobe InDesign", "CorelDRAW", "Photoshop", "Pre-Press"],
     icon: "BookOpen",
-  },
-  {
-    name: "Corporate Branding",
-    slug: "corporate-branding",
-    description:
-      "Executive presentation decks, internal collateral, corporate signage, and enterprise identity standards.",
-    tools: ["Illustrator", "InDesign", "PowerPoint", "Keynote"],
-    icon: "Briefcase",
   },
   {
     name: "Flyer",

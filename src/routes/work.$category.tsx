@@ -292,7 +292,7 @@ function CategoryDetailPage() {
             <div>
               <p className="eyebrow text-xs">Explore Other Disciplines</p>
               <h2 className="font-display text-xl font-bold uppercase text-foreground">
-                All 20 Design Specialisations
+                All {CATEGORY_DEFINITIONS.length} Design Specialisations
               </h2>
             </div>
             <Link
