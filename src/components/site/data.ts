@@ -52,11 +52,8 @@ export const SERVICE_CATEGORY_NAMES = [
   "3D Rendering",
   "AI Image Generation",
   "Banner Design",
-  "Brand Identity & Visual Strategy",
-  "Brand Identity Design",
   "Branding Projects",
   "Calendar",
-  "Calender",
   "Catalogue & Brochure Design",
   "Flyer",
   "Graphic Design",
@@ -85,11 +82,8 @@ export const CATEGORIES = [
   "3D Rendering",
   "AI Image Generation",
   "Banner Design",
-  "Brand Identity & Visual Strategy",
-  "Brand Identity Design",
   "Branding Projects",
   "Calendar",
-  "Calender",
   "Catalogue & Brochure Design",
   "Flyer",
   "Graphic Design",
@@ -140,22 +134,6 @@ export const CATEGORY_DEFINITIONS: CategoryMeta[] = [
     icon: "LayoutTemplate",
   },
   {
-    name: "Brand Identity & Visual Strategy",
-    slug: "brand-identity-visual-strategy",
-    description:
-      "Holistic brand positioning, visual strategy frameworks, style guides, color palettes, and typographic design systems.",
-    tools: ["Illustrator", "Figma", "Photoshop", "Brand Strategy"],
-    icon: "Compass",
-  },
-  {
-    name: "Brand Identity Design",
-    slug: "brand-identity-design",
-    description:
-      "End-to-end brand assets, stationary sets, guidelines, and cohesive visual language built for scalability across channels.",
-    tools: ["Adobe Illustrator", "InDesign", "Photoshop"],
-    icon: "Fingerprint",
-  },
-  {
     name: "Branding Projects",
     slug: "branding-projects",
     description:
@@ -168,14 +146,6 @@ export const CATEGORY_DEFINITIONS: CategoryMeta[] = [
     slug: "calendar",
     description:
       "Bespoke corporate wall and desk calendar designs with thematic layouts, typography, and premium print finishes.",
-    tools: ["InDesign", "Photoshop", "Illustrator"],
-    icon: "CalendarIcon",
-  },
-  {
-    name: "Calender",
-    slug: "calender",
-    description:
-      "Custom thematic wall and desk calendar designs, datesheets, and branded corporate agendas crafted for print excellence.",
     tools: ["InDesign", "Photoshop", "Illustrator"],
     icon: "CalendarIcon",
   },

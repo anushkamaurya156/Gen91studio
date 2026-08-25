@@ -285,31 +285,6 @@ export const WORK_MANIFEST: Array<{ category: string; fileName: string; url: str
     url: "/Images/Banner Design/image (6).png",
   },
   {
-    category: "Brand Identity & Visual Strategy",
-    fileName: "01.jpg",
-    url: "/Images/Brand Identity & Visual Strategy/01.jpg",
-  },
-  {
-    category: "Brand Identity & Visual Strategy",
-    fileName: "image (6).png",
-    url: "/Images/Brand Identity & Visual Strategy/image (6).png",
-  },
-  {
-    category: "Brand Identity Design",
-    fileName: "01(1).jpg",
-    url: "/Images/Brand Identity Design/01(1).jpg",
-  },
-  {
-    category: "Brand Identity Design",
-    fileName: "03.png",
-    url: "/Images/Brand Identity Design/03.png",
-  },
-  {
-    category: "Brand Identity Design",
-    fileName: "image (6).png",
-    url: "/Images/Brand Identity Design/image (6).png",
-  },
-  {
     category: "Branding Projects",
     fileName: "06.png",
     url: "/Images/Branding Projects/06.png",
@@ -353,26 +328,6 @@ export const WORK_MANIFEST: Array<{ category: string; fileName: string; url: str
     category: "Calendar",
     fileName: "04.jpg",
     url: "/Images/Calendar/04.jpg",
-  },
-  {
-    category: "Calender",
-    fileName: "01.jpg",
-    url: "/Images/Calender/01.jpg",
-  },
-  {
-    category: "Calender",
-    fileName: "02.jpg",
-    url: "/Images/Calender/02.jpg",
-  },
-  {
-    category: "Calender",
-    fileName: "03.jpg",
-    url: "/Images/Calender/03.jpg",
-  },
-  {
-    category: "Calender",
-    fileName: "04.jpg",
-    url: "/Images/Calender/04.jpg",
   },
   {
     category: "Catalogue & Brochure Design",
