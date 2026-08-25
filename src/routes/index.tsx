@@ -62,7 +62,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   useEffect(() => {
     const scrollToHash = () => {
-      const hash = window.location.hash;
+      const hash = window.location.hash || (window.location.href.includes("#") ? window.location.href.split("#")[1] : "");
       if (hash) {
         const id = hash.replace(/^#/, "");
         const el = document.getElementById(id);
@@ -71,16 +71,18 @@ function Index() {
         } else {
           const timer = setTimeout(() => {
             document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-          }, 200);
+          }, 250);
           return () => clearTimeout(timer);
         }
       }
     };
 
-    const initialTimer = setTimeout(scrollToHash, 100);
+    const timer1 = setTimeout(scrollToHash, 60);
+    const timer2 = setTimeout(scrollToHash, 300);
     window.addEventListener("hashchange", scrollToHash);
     return () => {
-      clearTimeout(initialTimer);
+      clearTimeout(timer1);
+      clearTimeout(timer2);
       window.removeEventListener("hashchange", scrollToHash);
     };
   }, []);
