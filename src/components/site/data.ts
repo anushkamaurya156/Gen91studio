@@ -3,8 +3,7 @@ import { WORK_MANIFEST } from "./work-manifest-inline";
 export const NAV_LINKS = [
   { label: "Studio", href: "#about" },
   { label: "Expertise", href: "#skills" },
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
+  { label: "Work", href: "#services" },
   { label: "Experience", href: "#experience" },
   { label: "Resume", href: "#resume" },
   { label: "Contact", href: "#contact" },
@@ -48,68 +47,27 @@ export const EXPERTISE = [
   { name: "Motion Graphics", level: 65 },
 ];
 
-export const SERVICES = [
-  {
-    title: "Brand Identity Design",
-    icon: "Fingerprint",
-    copy: "Complete identity systems — marks, palettes, type and guidelines built to scale.",
-  },
-  {
-    title: "Logo Design",
-    icon: "Hexagon",
-    copy: "Distinctive, timeless marks crafted for instant recall.",
-  },
-  {
-    title: "Catalog Design",
-    icon: "BookOpen",
-    copy: "Product catalogs with editorial clarity and technical precision.",
-  },
-  {
-    title: "Brochure Design",
-    icon: "FileText",
-    copy: "Print-ready brochures that carry your story in the hand.",
-  },
-  {
-    title: "Packaging Design",
-    icon: "Package",
-    copy: "Shelf-ready packaging with premium finish and structure.",
-  },
-  {
-    title: "3D Visualization",
-    icon: "Boxes",
-    copy: "Photoreal 3D scenes that sell the product before it exists.",
-  },
-  {
-    title: "Product Mockups",
-    icon: "Layers",
-    copy: "Presentation-grade mockups for pitches and campaigns.",
-  },
-  {
-    title: "Social Media Creatives",
-    icon: "Sparkles",
-    copy: "Scroll-stopping creative systems across every channel.",
-  },
-  {
-    title: "Video Editing",
-    icon: "Clapperboard",
-    copy: "Cuts, motion graphics and sound that hold attention.",
-  },
-  {
-    title: "YouTube Thumbnails",
-    icon: "MonitorPlay",
-    copy: "High-CTR thumbnail design built on real visual hierarchy.",
-  },
-  {
-    title: "AI Prompt Engineering",
-    icon: "Wand2",
-    copy: "Art-directed AI imagery tuned to your brand language.",
-  },
-  {
-    title: "Product Photography",
-    icon: "Camera",
-    copy: "Studio lighting and retouching for catalog-ready shots.",
-  },
-];
+export const SERVICE_CATEGORY_NAMES = [
+  "Pattern Design",
+  "Social Media Design",
+  "Tshirt Design",
+  "Visiting Card",
+  "AI Image Generation",
+  "Brand Identity & Visual Strategy",
+  "Brand Identity Design",
+  "Branding Projects",
+  "Calendar",
+  "Catalogue & Brochure Design",
+  "Flyer",
+  "Graphic Design",
+  "Illustrations",
+  "Infographics",
+  "Logo Designs",
+  "Menu Card",
+  "Packaging Design",
+  "3D Modeling",
+  "3D Rendering",
+] as const;
 
 export type CategoryMeta = {
   name: string;

@@ -101,7 +101,7 @@ function CategoryDetailPage() {
               <Home size={13} /> Home
             </Link>
             <span>/</span>
-            <Link to="/" hash="work" className="hover:text-primary transition-colors">
+            <Link to="/" hash="services" className="hover:text-primary transition-colors">
               Work
             </Link>
             <span>/</span>
@@ -155,7 +155,7 @@ function CategoryDetailPage() {
                 </div>
 
                 <Button asChild variant="quiet" size="sm" className="rounded-full w-full sm:w-auto">
-                  <Link to="/" hash="work">
+                  <Link to="/" hash="services">
                     <ArrowLeft size={14} /> Back to All Disciplines
                   </Link>
                 </Button>
@@ -200,7 +200,7 @@ function CategoryDetailPage() {
               </p>
               <div className="mt-6 flex justify-center gap-3">
                 <Button asChild variant="hero" size="sm" className="rounded-full">
-                  <Link to="/" hash="work">
+                  <Link to="/" hash="services">
                     Explore Other Categories
                   </Link>
                 </Button>
@@ -295,10 +295,10 @@ function CategoryDetailPage() {
             </div>
             <Link
               to="/"
-              hash="work"
+              hash="services"
               className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1"
             >
-              Back to Filter View <ArrowRight size={14} />
+              Back to Services <ArrowRight size={14} />
             </Link>
           </div>
 

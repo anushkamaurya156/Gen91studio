@@ -71,7 +71,7 @@ export function Hero() {
               size="lg"
               className="w-full sm:w-auto rounded-full font-bold"
             >
-              <a href="#work">
+              <a href="#services">
                 View Our Work <ArrowRight />
               </a>
             </Button>

@@ -82,14 +82,9 @@ export function Skills() {
               {SKILLS.map((skill, i) => (
                 <Reveal key={skill.name} delay={i * 0.03}>
                   <div className="group">
-                    <div className="flex items-baseline justify-between gap-3">
-                      <span className="font-display text-xs sm:text-sm font-bold tracking-wide uppercase">
-                        {skill.name}
-                      </span>
-                      <span className="font-display text-xs font-bold text-primary">
-                        {skill.level}%
-                      </span>
-                    </div>
+                    <span className="font-display text-xs sm:text-sm font-bold tracking-wide uppercase">
+                      {skill.name}
+                    </span>
                     <div className="mt-2 h-1 overflow-hidden rounded-full bg-secondary">
                       <motion.div
                         className="bg-ember h-full origin-left rounded-full"
@@ -115,14 +110,9 @@ export function Skills() {
               {EXPERTISE.map((item, i) => (
                 <Reveal key={item.name} delay={i * 0.03}>
                   <div className="group">
-                    <div className="flex items-baseline justify-between gap-3">
-                      <span className="font-display text-xs sm:text-sm font-bold tracking-wide uppercase">
-                        {item.name}
-                      </span>
-                      <span className="font-display text-xs font-bold text-primary">
-                        {item.level}%
-                      </span>
-                    </div>
+                    <span className="font-display text-xs sm:text-sm font-bold tracking-wide uppercase">
+                      {item.name}
+                    </span>
                     <div className="mt-2 h-1 overflow-hidden rounded-full bg-secondary">
                       <motion.div
                         className="bg-ember h-full origin-left rounded-full"
