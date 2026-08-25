@@ -186,11 +186,6 @@ export const WORK_MANIFEST: Array<{ category: string; fileName: string; url: str
   },
   {
     category: "3D Rendering",
-    fileName: "Clothes.jpeg",
-    url: "/Images/3D Rendering/Clothes.jpeg",
-  },
-  {
-    category: "3D Rendering",
     fileName: "image (5).png",
     url: "/Images/3D Rendering/image (5).png",
   },
