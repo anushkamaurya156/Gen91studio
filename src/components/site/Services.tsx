@@ -54,7 +54,7 @@ const icons: Record<string, LucideIcon> = {
 
 export function Services() {
   return (
-    <section id="services" className="section-pad relative">
+    <section id="services" className="section-pad relative overflow-hidden w-full max-w-full">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Services"

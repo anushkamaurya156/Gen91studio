@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export function Resume() {
   return (
-    <section id="resume" className="section-pad relative">
+    <section id="resume" className="section-pad relative overflow-hidden w-full max-w-full">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Resume"

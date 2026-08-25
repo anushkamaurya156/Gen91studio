@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowUp, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
+import { ArrowUp, Linkedin, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
 import { CONTACT, NAV_LINKS } from "./data";
 import { Reveal, SectionHeading } from "./motion-kit";
 import { Button } from "@/components/ui/button";
@@ -17,6 +17,7 @@ const details = [
     href: `tel:${CONTACT.phone.replace(/\s/g, "")}`,
   },
   { icon: MessageCircle, label: "WhatsApp", value: "Chat on WhatsApp", href: CONTACT.whatsapp },
+  { icon: Linkedin, label: "LinkedIn", value: "Connect on LinkedIn", href: CONTACT.linkedin },
   { icon: MapPin, label: "Location", value: CONTACT.location, href: undefined },
 ];
 
@@ -50,36 +51,36 @@ export function Contact() {
           subtitle="Tell us what you are building. We will help you find the right visual direction."
         />
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] w-full max-w-full">
+        <div className="mt-12 sm:mt-16 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] w-full max-w-full">
           <Reveal className="min-w-0 w-full">
             <div className="grid h-full gap-3 sm:grid-cols-2 lg:grid-cols-1">
               {details.map(({ icon: Icon, label, value, href }) => {
                 const inner = (
-                  <div className="glass-card flex items-center gap-4 rounded-2xl p-5 transition-all duration-500 hover:-translate-y-0.5 hover:border-primary/60">
-                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-primary/30 bg-primary/10 text-primary">
+                  <div className="glass-card flex items-center gap-3.5 sm:gap-4 rounded-2xl p-4 sm:p-5 transition-all duration-500 hover:-translate-y-0.5 hover:border-primary/60 min-w-0 w-full overflow-hidden">
+                    <span className="grid h-10 w-10 sm:h-11 sm:w-11 shrink-0 place-items-center rounded-xl border border-primary/30 bg-primary/10 text-primary">
                       <Icon size={17} />
                     </span>
-                    <span className="min-w-0">
-                      <span className="block text-[0.66rem] font-semibold tracking-[0.2em] text-muted-foreground uppercase">
+                    <span className="min-w-0 flex-1 overflow-hidden">
+                      <span className="block text-[0.65rem] font-semibold tracking-[0.2em] text-muted-foreground uppercase">
                         {label}
                       </span>
-                      <span className="block truncate text-sm font-medium">{value}</span>
+                      <span className="block truncate text-xs sm:text-sm font-medium text-foreground">{value}</span>
                     </span>
                   </div>
                 );
                 return href ? (
-                  <a key={label} href={href} target="_blank" rel="noreferrer noopener">
+                  <a key={label} href={href} target="_blank" rel="noreferrer noopener" className="min-w-0 block">
                     {inner}
                   </a>
                 ) : (
-                  <div key={label}>{inner}</div>
+                  <div key={label} className="min-w-0 block">{inner}</div>
                 );
               })}
             </div>
           </Reveal>
 
           <Reveal delay={0.1} className="min-w-0 w-full">
-            <form onSubmit={onSubmit} className="glass-card rounded-3xl p-6 sm:p-8 w-full min-w-0 max-w-full">
+            <form onSubmit={onSubmit} className="glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 w-full min-w-0 max-w-full">
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="min-w-0">
                   <label
@@ -146,13 +147,13 @@ export function Contact() {
         </div>
 
         <Reveal className="mt-6 w-full min-w-0">
-          <div className="glass-card overflow-hidden rounded-3xl w-full max-w-full">
+          <div className="glass-card overflow-hidden rounded-2xl sm:rounded-3xl w-full max-w-full">
             <iframe
               title="Gen91 Studio location — Laxmibahen Chheda Marg, Nalasopara West, Maharashtra, India"
               src="https://www.google.com/maps?q=Laxmibahen+Chheda+Marg,+Nalasopara+West,+Maharashtra,+India&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="h-[320px] w-full max-w-full grayscale-[0.6] contrast-125 border-0"
+              className="h-[280px] sm:h-[320px] w-full max-w-full grayscale-[0.6] contrast-125 border-0"
             />
           </div>
         </Reveal>
@@ -163,19 +164,19 @@ export function Contact() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border py-10">
+    <footer className="border-t border-border py-8 sm:py-10">
       <div className="mx-auto grid max-w-7xl gap-6 px-5 sm:px-8 md:grid-cols-[1fr_auto] md:items-center">
         <div>
-          <p className="font-display text-sm font-semibold">
+          <p className="font-display text-xs sm:text-sm font-semibold">
             © 2026 Gen91Studio. All Rights Reserved.
           </p>
-          <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
+          <ul className="mt-3 flex flex-wrap gap-x-4 sm:gap-x-5 gap-y-2">
             {NAV_LINKS.map((l) => (
               <li key={l.label}>
                 <Link
                   to="/"
                   hash={l.hash || l.href.replace(/^.*#/, "")}
-                  className="text-xs text-muted-foreground hover:text-primary"
+                  className="text-xs text-muted-foreground hover:text-primary transition-colors"
                 >
                   {l.label}
                 </Link>
@@ -183,20 +184,29 @@ export function Footer() {
             ))}
           </ul>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <a
             href={CONTACT.whatsapp}
             target="_blank"
             rel="noreferrer noopener"
             aria-label="WhatsApp"
-            className="grid h-10 w-10 place-items-center rounded-lg border border-border text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+            className="grid h-9 w-9 sm:h-10 sm:w-10 place-items-center rounded-lg border border-border text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
           >
             <MessageCircle size={16} />
           </a>
           <a
+            href={CONTACT.linkedin}
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="LinkedIn"
+            className="grid h-9 w-9 sm:h-10 sm:w-10 place-items-center rounded-lg border border-border text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+          >
+            <Linkedin size={16} />
+          </a>
+          <a
             href={`mailto:${CONTACT.email}`}
             aria-label="Email"
-            className="grid h-10 w-10 place-items-center rounded-lg border border-border text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+            className="grid h-9 w-9 sm:h-10 sm:w-10 place-items-center rounded-lg border border-border text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
           >
             <Mail size={16} />
           </a>
@@ -204,7 +214,7 @@ export function Footer() {
             to="/"
             hash="top"
             aria-label="Back to top"
-            className="bg-ember ml-2 grid h-10 w-10 place-items-center rounded-lg text-primary-foreground transition-transform hover:-translate-y-0.5"
+            className="bg-ember ml-1 sm:ml-2 grid h-9 w-9 sm:h-10 sm:w-10 place-items-center rounded-lg text-primary-foreground transition-transform hover:-translate-y-0.5"
           >
             <ArrowUp size={16} />
           </Link>

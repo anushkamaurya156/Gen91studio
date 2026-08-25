@@ -49,15 +49,15 @@ function SkillRow({
 
 export function About() {
   return (
-    <section id="about" className="section-pad relative">
+    <section id="about" className="section-pad relative overflow-hidden w-full max-w-full">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
-          <Reveal>
+        <div className="grid gap-10 sm:gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
+          <Reveal className="min-w-0">
             <SectionLabel>About Gen91studio</SectionLabel>
-            <h2 className="mt-5 text-4xl leading-[0.92] font-black tracking-tighter uppercase sm:text-5xl md:text-6xl">
+            <h2 className="mt-5 text-3xl sm:text-5xl md:text-6xl leading-[0.95] sm:leading-[0.92] font-black tracking-tighter uppercase">
               A decade turning <span className="text-ember">briefs into brands</span>
             </h2>
-            <div className="mt-7 space-y-4 text-sm leading-relaxed font-light text-muted-foreground sm:text-base">
+            <div className="mt-6 sm:mt-7 space-y-4 text-xs sm:text-base leading-relaxed font-light text-muted-foreground">
               <p>
                 Gen91Studio is an independent creative design studio led by a designer with over 10
                 years of experience helping businesses, startups, creators, and brands stand out
@@ -78,18 +78,18 @@ export function About() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-2 gap-3 self-center sm:gap-5">
+          <div className="grid grid-cols-2 gap-2.5 sm:gap-5 self-center min-w-0">
             {STATS.map((stat, i) => (
-              <Reveal key={stat.label} delay={i * 0.08}>
-                <div className="glass-card group relative h-full overflow-hidden rounded-2xl sm:rounded-3xl p-4 sm:p-7 transition-all duration-500 hover:-translate-y-1 hover:border-primary/60">
+              <Reveal key={stat.label} delay={i * 0.08} className="min-w-0">
+                <div className="glass-card group relative h-full overflow-hidden rounded-2xl sm:rounded-3xl p-3.5 sm:p-7 transition-all duration-500 hover:-translate-y-1 hover:border-primary/60 min-w-0">
                   <div
                     aria-hidden
                     className="bg-ember absolute -top-14 -right-14 h-28 w-28 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-30"
                   />
-                  <div className="text-ember font-display text-3xl sm:text-5xl font-black tracking-tighter">
+                  <div className="text-ember font-display text-2xl sm:text-5xl font-black tracking-tighter">
                     <Counter to={stat.value} suffix={stat.suffix} />
                   </div>
-                  <p className="mt-2 sm:mt-3 text-[0.62rem] sm:text-[0.68rem] font-semibold tracking-[0.16em] sm:tracking-[0.2em] text-muted-foreground uppercase leading-tight">
+                  <p className="mt-1.5 sm:mt-3 text-[0.6rem] sm:text-[0.68rem] font-semibold tracking-[0.12em] sm:tracking-[0.2em] text-muted-foreground uppercase leading-tight">
                     {stat.label}
                   </p>
                 </div>
@@ -104,7 +104,7 @@ export function About() {
 
 export function Skills() {
   return (
-    <section id="skills" className="section-pad relative bg-surface/40">
+    <section id="skills" className="section-pad relative bg-surface/40 overflow-hidden w-full max-w-full">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Skills & Expertise"

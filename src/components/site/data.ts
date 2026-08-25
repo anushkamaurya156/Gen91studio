@@ -5,6 +5,7 @@ export const NAV_LINKS = [
   { label: "Expertise", href: "/#skills", hash: "skills" },
   { label: "Work", href: "/#services", hash: "services" },
   { label: "Experience", href: "/#experience", hash: "experience" },
+  { label: "Testimonials", href: "/#testimonials", hash: "testimonials" },
   { label: "Resume", href: "/#resume", hash: "resume" },
   { label: "Contact", href: "/#contact", hash: "contact" },
 ];
@@ -587,5 +588,7 @@ export const CONTACT = {
   email: "gen91studio@gmail.com",
   phone: "+91 89999 01362",
   whatsapp: "https://wa.me/918999901362",
+  linkedin:
+    "https://www.linkedin.com/in/arvind-maurya-86335240a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   location: "Laxmibahen Chheda Marg, Nalasopara West, Maharashtra, India",
 };
