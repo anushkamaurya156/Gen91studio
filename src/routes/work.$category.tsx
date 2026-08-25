@@ -1,17 +1,7 @@
 import { useState, useMemo } from "react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "motion/react";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Download,
-  Eye,
-  FolderOpen,
-  Home,
-  Sparkles,
-  X,
-  Layers,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, Eye, FolderOpen, Home, Sparkles, X, Layers } from "lucide-react";
 import {
   CATEGORY_DEFINITIONS,
   CATEGORY_DETAILS,
@@ -373,33 +363,15 @@ function CategoryDetailPage() {
                 />
               </div>
 
-              <div className="p-5 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-5 sm:gap-6 border-t border-border">
+              <div className="p-5 sm:p-8 border-t border-border">
                 <div className="space-y-1.5">
                   <span className="eyebrow text-xs">{lightbox.category}</span>
                   <h3 className="font-display text-xl sm:text-2xl font-extrabold uppercase text-foreground">
                     {lightbox.title}
                   </h3>
-                  <p className="text-xs sm:text-sm leading-relaxed text-muted-foreground max-w-2xl">
+                  <p className="text-xs sm:text-sm leading-relaxed text-muted-foreground max-w-3xl">
                     {lightbox.description}
                   </p>
-                </div>
-
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 shrink-0 w-full sm:w-auto">
-                  <Button
-                    asChild
-                    variant="hero"
-                    size="sm"
-                    className="rounded-full w-full sm:w-auto"
-                  >
-                    <a
-                      href={lightbox.image}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      download={`${lightbox.title}.jpg`}
-                    >
-                      <Download size={14} /> Download Image
-                    </a>
-                  </Button>
                 </div>
               </div>
             </motion.div>
