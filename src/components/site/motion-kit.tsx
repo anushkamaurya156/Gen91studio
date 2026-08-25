@@ -159,7 +159,7 @@ export function Loader() {
 
   useEffect(() => {
     setMounted(true);
-    const t = setTimeout(() => setDone(true), 5600);
+    const t = setTimeout(() => setDone(true), 2500);
     return () => clearTimeout(t);
   }, []);
 
@@ -170,7 +170,7 @@ export function Loader() {
       aria-hidden
       initial={{ opacity: 1 }}
       animate={{ opacity: 0 }}
-      transition={{ duration: 0.6, delay: 5.0, ease: "easeInOut" }}
+      transition={{ duration: 0.5, delay: 2.0, ease: "easeInOut" }}
       onAnimationComplete={() => setDone(true)}
       style={{ pointerEvents: "none" }}
       className="pointer-events-none fixed inset-0 z-[80] flex items-center justify-center bg-background"
@@ -187,7 +187,7 @@ export function Loader() {
             className="bg-ember h-full w-full origin-left"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 5.0, ease: "easeInOut" }}
+            transition={{ duration: 2.0, ease: "easeInOut" }}
           />
         </div>
       </div>
