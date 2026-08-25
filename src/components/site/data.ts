@@ -1,12 +1,12 @@
 import { WORK_MANIFEST } from "./work-manifest-inline";
 
 export const NAV_LINKS = [
-  { label: "Studio", href: "#about" },
-  { label: "Expertise", href: "#skills" },
-  { label: "Work", href: "#services" },
-  { label: "Experience", href: "#experience" },
-  { label: "Resume", href: "#resume" },
-  { label: "Contact", href: "#contact" },
+  { label: "Studio", href: "/#about", hash: "about" },
+  { label: "Expertise", href: "/#skills", hash: "skills" },
+  { label: "Work", href: "/#services", hash: "services" },
+  { label: "Experience", href: "/#experience", hash: "experience" },
+  { label: "Resume", href: "/#resume", hash: "resume" },
+  { label: "Contact", href: "/#contact", hash: "contact" },
 ];
 
 export const STATS = [

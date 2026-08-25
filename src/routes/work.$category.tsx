@@ -159,6 +159,16 @@ function CategoryDetailPage() {
                     <ArrowLeft size={14} /> Back to All Disciplines
                   </Link>
                 </Button>
+                <Button
+                  asChild
+                  variant="hero"
+                  size="sm"
+                  className="rounded-full w-full sm:w-auto font-bold"
+                >
+                  <Link to="/" hash="contact">
+                    Commission {categoryName} Project
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>

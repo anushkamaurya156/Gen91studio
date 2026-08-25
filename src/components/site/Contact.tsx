@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { Link } from "@tanstack/react-router";
 import { ArrowUp, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
 import { CONTACT, NAV_LINKS } from "./data";
 import { Reveal, SectionHeading } from "./motion-kit";
@@ -170,10 +171,14 @@ export function Footer() {
           </p>
           <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
             {NAV_LINKS.map((l) => (
-              <li key={l.href}>
-                <a href={l.href} className="text-xs text-muted-foreground hover:text-primary">
+              <li key={l.label}>
+                <Link
+                  to="/"
+                  hash={l.hash || l.href.replace(/^.*#/, "")}
+                  className="text-xs text-muted-foreground hover:text-primary"
+                >
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -195,13 +200,14 @@ export function Footer() {
           >
             <Mail size={16} />
           </a>
-          <a
-            href="#top"
+          <Link
+            to="/"
+            hash="top"
             aria-label="Back to top"
             className="bg-ember ml-2 grid h-10 w-10 place-items-center rounded-lg text-primary-foreground transition-transform hover:-translate-y-0.5"
           >
             <ArrowUp size={16} />
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "@tanstack/react-router";
 import { ArrowRight, Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -71,9 +72,9 @@ export function Hero() {
               size="lg"
               className="w-full sm:w-auto rounded-full font-bold"
             >
-              <a href="#services">
+              <Link to="/" hash="services">
                 View Our Work <ArrowRight />
-              </a>
+              </Link>
             </Button>
             <Button
               asChild
@@ -91,9 +92,9 @@ export function Hero() {
               size="lg"
               className="w-full sm:w-auto rounded-full font-bold"
             >
-              <a href="#contact">
+              <Link to="/" hash="contact">
                 <Mail /> Start a Project
-              </a>
+              </Link>
             </Button>
           </motion.div>
         </div>
