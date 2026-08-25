@@ -307,71 +307,8 @@ export type WorkItem = {
   fileName: string;
 };
 
-export function isGenericFilename(fileName: string): boolean {
-  const base = fileName.replace(/\.[^/.]+$/, "").trim();
-
-  // 1. Pure numbers or numbers in parentheses e.g. "01", "02", "01(1)", "01 (2)"
-  if (/^\d+(\s*\(\d+\))?$/.test(base)) return true;
-
-  // 2. Generic label patterns e.g. "image (6)", "image 12", "preview01", "img 02"
-  if (
-    /^(image|img|pic|picture|photo|preview|untitled|file|asset|design)[\s_-]*(\(\d+\)|\d+)?$/i.test(
-      base,
-    )
-  ) {
-    return true;
-  }
-
-  // 3. Known camera/app/export prefixes
-  if (
-    /^(WhatsApp Image|IMG[-_]|DSC[-_]|PXL[-_]|SAM[-_]|DJI[-_]|Screenshot|ChatGPT Image|Gemini[_\s-]Generated)/i.test(
-      base,
-    )
-  ) {
-    return true;
-  }
-
-  // 4. Hex hashes / MD5 / SHA / UUID (e.g. 3cf391b0ed504f27e766448e947c75df)
-  if (/^[0-9a-fA-F]{16,}$/.test(base)) return true;
-  if (/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(base)) return true;
-
-  // 5. Long token with mix of letters and digits without spaces (e.g. random alphanumeric hash)
-  if (
-    !base.includes(" ") &&
-    !base.includes("-") &&
-    !base.includes("_") &&
-    base.length > 10 &&
-    /\d/.test(base) &&
-    /[a-zA-Z]/.test(base)
-  ) {
-    return true;
-  }
-
-  // 6. Check if words have any real readable words with vowels (at least 2 letters and a vowel)
-  const words = base.replace(/[-_]/g, " ").replace(/\s+/g, " ").trim().split(" ");
-  const readableWords = words.filter(
-    (w) => /[aeiouyAEIOUY]/.test(w) && w.length >= 2 && !/^\d+$/.test(w),
-  );
-  if (readableWords.length === 0) return true;
-
-  return false;
-}
-
-export function cleanDescriptiveTitle(fileName: string): string {
-  let cleanName = fileName.replace(/\.[^/.]+$/, ""); // strip extension
-  cleanName = cleanName.replace(/[-_]/g, " ").replace(/\s+/g, " ").trim();
-  // Capitalize first letter of words if they are all lowercase
-  if (cleanName === cleanName.toLowerCase()) {
-    cleanName = cleanName
-      .split(" ")
-      .map((word) => (word ? word[0].toUpperCase() + word.slice(1) : ""))
-      .join(" ");
-  }
-  return cleanName;
-}
-
-// Build all project items with per-category sequential exhibit numbering
-const genericExhibitCounters: Record<string, number> = {};
+// Build all project items with per-category sequential exhibit numbering ({Category Name} Exhibit {NN})
+const exhibitCounters: Record<string, number> = {};
 
 const generatedWorkItems: WorkItem[] = WORK_MANIFEST.map((entry) => {
   const categoryName = entry.category;
@@ -379,14 +316,9 @@ const generatedWorkItems: WorkItem[] = WORK_MANIFEST.map((entry) => {
   const slug = getCategorySlug(categoryName);
   const catDef = CATEGORY_DETAILS[categoryName];
 
-  let title: string;
-  if (isGenericFilename(fileName)) {
-    genericExhibitCounters[categoryName] = (genericExhibitCounters[categoryName] || 0) + 1;
-    const exhibitNumber = String(genericExhibitCounters[categoryName]).padStart(2, "0");
-    title = `${categoryName} Exhibit ${exhibitNumber}`;
-  } else {
-    title = cleanDescriptiveTitle(fileName);
-  }
+  exhibitCounters[categoryName] = (exhibitCounters[categoryName] || 0) + 1;
+  const exhibitNumber = String(exhibitCounters[categoryName]).padStart(2, "0");
+  const title = `${categoryName} Exhibit ${exhibitNumber}`;
 
   return {
     id: `${slug}-${fileName.replace(/[^a-zA-Z0-9]/g, "-")}`,
