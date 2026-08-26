@@ -1,0 +1,14 @@
+{
+  "title": "3D Modeling Exhibit 09",
+  "category": "content/categories/3d-modeling.json",
+  "image": "/Images/3D Modeling/exhibition-stall-design-3d-model-max (3)-1.jpg",
+  "alt": "3D Modeling project — 3D Modeling Exhibit 09 by Arvind Maurya",
+  "description": "High-poly and low-poly 3D models of consumer products, electronics, furniture, interior spaces, and automotive concepts.",
+  "tech": [
+    "Blender",
+    "3ds Max",
+    "Cinema 4D",
+    "ZBrush"
+  ],
+  "fileName": "exhibition-stall-design-3d-model-max (3)-1.jpg"
+}

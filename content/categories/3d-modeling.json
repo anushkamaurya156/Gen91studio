@@ -1,0 +1,13 @@
+{
+  "name": "3D Modeling",
+  "slug": "3d-modeling",
+  "description": "High-poly and low-poly 3D models of consumer products, electronics, furniture, interior spaces, and automotive concepts.",
+  "tools": [
+    "Blender",
+    "3ds Max",
+    "Cinema 4D",
+    "ZBrush"
+  ],
+  "icon": "Boxes",
+  "sortOrder": 1
+}

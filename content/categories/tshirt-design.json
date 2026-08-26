@@ -1,0 +1,12 @@
+{
+  "name": "Tshirt Design",
+  "slug": "tshirt-design",
+  "description": "Bold apparel graphics, screen-printing artwork, merchandise illustrations, and custom typographic streetwear designs.",
+  "tools": [
+    "Illustrator",
+    "Photoshop",
+    "Screen Print Separations"
+  ],
+  "icon": "Shirt",
+  "sortOrder": 17
+}

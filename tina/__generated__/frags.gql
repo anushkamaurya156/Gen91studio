@@ -1,0 +1,163 @@
+fragment CategoryParts on Category {
+  __typename
+  name
+  slug
+  description
+  tools
+  icon
+  sortOrder
+}
+
+fragment WorkItemParts on WorkItem {
+  __typename
+  title
+  category {
+    ... on Category {
+      __typename
+      name
+      slug
+      description
+      tools
+      icon
+      sortOrder
+    }
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+  }
+  image
+  alt
+  description
+  tech
+  fileName
+}
+
+fragment SiteSectionParts on SiteSection {
+  __typename
+  ... on SiteSectionHero {
+    eyebrow
+    headingLine1
+    headingHighlight
+    subtitle
+    locationText
+    profileImage
+    badgeYears
+    badgeYearsText
+    badgeCraftText
+  }
+  ... on SiteSectionAbout {
+    label
+    titleLine1
+    titleHighlight
+    paragraphs
+    stats {
+      __typename
+      value
+      suffix
+      label
+    }
+  }
+  ... on SiteSectionSkills {
+    eyebrow
+    title
+    titleHighlight
+    subtitle
+    skills {
+      __typename
+      name
+      level
+    }
+    expertise {
+      __typename
+      name
+      level
+    }
+  }
+  ... on SiteSectionExperience {
+    eyebrow
+    title
+    titleHighlight
+    subtitle
+    experience {
+      __typename
+      company
+      role
+      duration
+      achievement
+    }
+  }
+  ... on SiteSectionTestimonials {
+    eyebrow
+    title
+    titleHighlight
+    testimonials {
+      __typename
+      name
+      title
+      quote
+      rating
+    }
+  }
+  ... on SiteSectionResume {
+    name
+    headline
+    contactLine
+    summary
+    coreCompetencies
+    experience {
+      __typename
+      role
+      company
+      duration
+      bullets
+    }
+    freelanceExperience {
+      __typename
+      role
+      company
+      duration
+      bullets
+    }
+    technicalSkills {
+      __typename
+      threeDAndRendering
+      graphicDesign
+      video
+      additional
+    }
+    education {
+      __typename
+      degree
+      institution
+    }
+    languages
+  }
+  ... on SiteSectionContact {
+    eyebrow
+    title
+    titleHighlight
+    subtitle
+    email
+    phone
+    whatsapp
+    linkedin
+    location
+  }
+  ... on SiteSectionNavigation {
+    links {
+      __typename
+      label
+      href
+      hash
+    }
+  }
+}

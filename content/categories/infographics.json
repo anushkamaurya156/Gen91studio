@@ -1,0 +1,12 @@
+{
+  "name": "Infographics",
+  "slug": "infographics",
+  "description": "Clear data visualisations, instructional diagrams, process workflows, and statistical graphics that simplify complex information.",
+  "tools": [
+    "Illustrator",
+    "After Effects",
+    "Information Design"
+  ],
+  "icon": "BarChart3",
+  "sortOrder": 11
+}

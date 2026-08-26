@@ -1,0 +1,13 @@
+{
+  "name": "3D Rendering",
+  "slug": "3d-rendering",
+  "description": "Photorealistic lighting, material texturing, and commercial studio visualisations for products, architecture, and marketing assets.",
+  "tools": [
+    "KeyShot",
+    "V-Ray",
+    "Octane",
+    "Blender Cycles"
+  ],
+  "icon": "Sparkles",
+  "sortOrder": 2
+}

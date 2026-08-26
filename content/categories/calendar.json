@@ -1,0 +1,12 @@
+{
+  "name": "Calendar",
+  "slug": "calendar",
+  "description": "Bespoke corporate wall and desk calendar designs with thematic layouts, typography, and premium print finishes.",
+  "tools": [
+    "InDesign",
+    "Photoshop",
+    "Illustrator"
+  ],
+  "icon": "CalendarIcon",
+  "sortOrder": 6
+}

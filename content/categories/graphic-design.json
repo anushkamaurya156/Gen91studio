@@ -1,0 +1,12 @@
+{
+  "name": "Graphic Design",
+  "slug": "graphic-design",
+  "description": "Comprehensive print and digital graphic design solutions for advertising, corporate communications, and marketing campaigns.",
+  "tools": [
+    "Photoshop",
+    "Illustrator",
+    "CorelDRAW"
+  ],
+  "icon": "Palette",
+  "sortOrder": 9
+}

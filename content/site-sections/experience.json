@@ -1,0 +1,69 @@
+{
+  "eyebrow": "Experience",
+  "title": "Ten years,",
+  "titleHighlight": "ten studios",
+  "subtitle": "A path from pre-press apprentice to creative director across industrial, export and retail brands.",
+  "experience": [
+    {
+      "company": "Remi Group",
+      "role": "3D Designer & Graphic Designer",
+      "duration": "Ongoing",
+      "achievement": "Created 3D renders, product visualization, product catalogues, banners, e-catalogues, and corporate presentation / PPT designs."
+    },
+    {
+      "company": "Adorn India, Vasai East",
+      "role": "3D Graphic Designer, Video Editor & Social Media Designer",
+      "duration": "2025 | 6 Months",
+      "achievement": "Created 3D design and visual content for fashion/lifestyle, video editing and promotional social media creatives."
+    },
+    {
+      "company": "Big Imports & Gifts, Bandra",
+      "role": "3D Graphic Designer & Video Editor",
+      "duration": "6 Months",
+      "achievement": "Created 3D product visuals, promotional and product showcase videos, and graphic design assets."
+    },
+    {
+      "company": "V. K. Jewels, Marine Lines – East",
+      "role": "Graphic Designer & Video Editor",
+      "duration": "1.4 Years",
+      "achievement": "Designed jewellery branding materials, product packshots, promotional graphics, and managed video editing."
+    },
+    {
+      "company": "Geo Lighting, Nalasopara East",
+      "role": "3D Modelling Designer & Social Media Manager",
+      "duration": "2 Years",
+      "achievement": "Developed detailed 3D models and photorealistic V-Ray renders for lighting products, plus managed social media content."
+    },
+    {
+      "company": "SPC Machines, Nalasopara East",
+      "role": "Graphic Designer, Video Editor & 3D Modeller",
+      "duration": "1.5 Years",
+      "achievement": "Created 3D models, industrial machine product renders, marketing graphics, and company presentation videos."
+    },
+    {
+      "company": "Neway Advertising, Vasai East",
+      "role": "Graphic Designer",
+      "duration": "6 Months",
+      "achievement": "Executed advertising and print design projects, banners, hoardings and brand creatives for clients."
+    },
+    {
+      "company": "Oggo Exports, Lower Parel",
+      "role": "Graphic Designer & Textile Designer",
+      "duration": "1.11 Years",
+      "achievement": "Created textile print designs, packaging layouts, and export-ready graphic assets for apparel clients."
+    },
+    {
+      "company": "Samarth Graphics, Vasai West",
+      "role": "3D Modeller & Graphic Designer",
+      "duration": "1 Year",
+      "achievement": "Delivered 3D modelling, product visualization and graphic design for client projects."
+    },
+    {
+      "company": "Crystal Art, Bhayandar East",
+      "role": "Graphic Designer",
+      "duration": "1.2 Years",
+      "achievement": "Created branding, logo designs, and print media graphics for retail and commercial clients."
+    }
+  ],
+  "_template": "experience"
+}

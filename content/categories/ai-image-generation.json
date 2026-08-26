@@ -1,0 +1,13 @@
+{
+  "name": "AI Image Generation",
+  "slug": "ai-image-generation",
+  "description": "Art-directed AI prompt engineering, conceptual imagery, hyper-real visuals, and generative commercial assets tailored to brand language.",
+  "tools": [
+    "Midjourney",
+    "Stable Diffusion",
+    "DALL-E",
+    "Photoshop AI"
+  ],
+  "icon": "Wand2",
+  "sortOrder": 3
+}

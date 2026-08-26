@@ -1,0 +1,14 @@
+{
+  "title": "3D Rendering Exhibit 04",
+  "category": "content/categories/3d-rendering.json",
+  "image": "/Images/3D Rendering/215487.55202b0deef90.jpeg",
+  "alt": "3D Rendering project — 3D Rendering Exhibit 04 by Arvind Maurya",
+  "description": "Photorealistic lighting, material texturing, and commercial studio visualisations for products, architecture, and marketing assets.",
+  "tech": [
+    "KeyShot",
+    "V-Ray",
+    "Octane",
+    "Blender Cycles"
+  ],
+  "fileName": "215487.55202b0deef90.jpeg"
+}

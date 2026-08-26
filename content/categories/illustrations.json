@@ -1,0 +1,12 @@
+{
+  "name": "Illustrations",
+  "slug": "illustrations",
+  "description": "Custom vector art, character illustrations, vehicle artwork, and editorial imagery crafted with rich detail.",
+  "tools": [
+    "Illustrator",
+    "Photoshop",
+    "Procreate"
+  ],
+  "icon": "PenTool",
+  "sortOrder": 10
+}

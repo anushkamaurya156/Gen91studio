@@ -1,0 +1,13 @@
+{
+  "name": "Catalogue & Brochure Design",
+  "slug": "catalogue-brochure-design",
+  "description": "Multi-page technical catalogs, product brochures, specification sheets, and corporate company profiles with editorial hierarchy.",
+  "tools": [
+    "Adobe InDesign",
+    "CorelDRAW",
+    "Photoshop",
+    "Pre-Press"
+  ],
+  "icon": "BookOpen",
+  "sortOrder": 7
+}

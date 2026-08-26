@@ -1,0 +1,14 @@
+{
+  "title": "3D Rendering Exhibit 16",
+  "category": "content/categories/3d-rendering.json",
+  "image": "/Images/3D Rendering/WhatsApp Image 2026-08-16 at 8.02.37 PM.jpeg",
+  "alt": "3D Rendering project — 3D Rendering Exhibit 16 by Arvind Maurya",
+  "description": "Photorealistic lighting, material texturing, and commercial studio visualisations for products, architecture, and marketing assets.",
+  "tech": [
+    "KeyShot",
+    "V-Ray",
+    "Octane",
+    "Blender Cycles"
+  ],
+  "fileName": "WhatsApp Image 2026-08-16 at 8.02.37 PM.jpeg"
+}

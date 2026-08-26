@@ -1,0 +1,40 @@
+{
+  "links": [
+    {
+      "label": "Studio",
+      "href": "/#about",
+      "hash": "about"
+    },
+    {
+      "label": "Expertise",
+      "href": "/#skills",
+      "hash": "skills"
+    },
+    {
+      "label": "Work",
+      "href": "/#services",
+      "hash": "services"
+    },
+    {
+      "label": "Experience",
+      "href": "/#experience",
+      "hash": "experience"
+    },
+    {
+      "label": "Testimonials",
+      "href": "/#testimonials",
+      "hash": "testimonials"
+    },
+    {
+      "label": "Resume",
+      "href": "/#resume",
+      "hash": "resume"
+    },
+    {
+      "label": "Contact",
+      "href": "/#contact",
+      "hash": "contact"
+    }
+  ],
+  "_template": "navigation"
+}

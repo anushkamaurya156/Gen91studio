@@ -1,0 +1,14 @@
+{
+  "title": "3D Rendering Exhibit 13",
+  "category": "content/categories/3d-rendering.json",
+  "image": "/Images/3D Rendering/Sofa.jpg",
+  "alt": "3D Rendering project — 3D Rendering Exhibit 13 by Arvind Maurya",
+  "description": "Photorealistic lighting, material texturing, and commercial studio visualisations for products, architecture, and marketing assets.",
+  "tech": [
+    "KeyShot",
+    "V-Ray",
+    "Octane",
+    "Blender Cycles"
+  ],
+  "fileName": "Sofa.jpg"
+}

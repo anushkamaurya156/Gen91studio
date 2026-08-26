@@ -1,0 +1,32 @@
+{
+  "eyebrow": "Testimonials",
+  "title": "What clients",
+  "titleHighlight": "say",
+  "testimonials": [
+    {
+      "name": "Rahul Shetty",
+      "title": "Marketing Head, Industrial Group",
+      "quote": "Arvind rebuilt our entire brand language in under three months. The catalog he designed is still our strongest sales tool.",
+      "rating": 5
+    },
+    {
+      "name": "Priya Nair",
+      "title": "Founder, Lifestyle Retail",
+      "quote": "The packaging system he delivered lifted our shelf presence instantly. Precise, premium and delivered on time.",
+      "rating": 5
+    },
+    {
+      "name": "Imran Qureshi",
+      "title": "Director, Export House",
+      "quote": "His 3D renders let us pitch products that had not been manufactured yet. Clients could not tell they were CG.",
+      "rating": 5
+    },
+    {
+      "name": "Sneha Kulkarni",
+      "title": "Brand Manager, Jewellery",
+      "quote": "A rare designer who understands print craft and digital motion equally well. Every deliverable was flawless.",
+      "rating": 5
+    }
+  ],
+  "_template": "testimonials"
+}

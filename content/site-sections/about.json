@@ -1,0 +1,33 @@
+{
+  "label": "About Gen91studio",
+  "titleLine1": "A decade turning",
+  "titleHighlight": "briefs into brands",
+  "paragraphs": [
+    "Gen91Studio is an independent creative design studio led by a designer with over 10 years of experience helping businesses, startups, creators, and brands stand out through premium visual communication.",
+    "I create brand identities, corporate branding, brochures, catalogs, packaging, product photography, social media creatives, video content, logo design, 3D models, product mockups, and AI-generated visuals. Every project receives personal attention, from the first idea through to the final delivery.",
+    "I believe good design should do more than look attractive. It should build trust, communicate value, and leave a lasting impression. By combining traditional design craft with modern tools such as 3D visualisation, motion, retouching, and AI-assisted imagery, I create visuals that help brands get noticed and remembered."
+  ],
+  "stats": [
+    {
+      "value": 10,
+      "suffix": "+",
+      "label": "Years Experience"
+    },
+    {
+      "value": 100,
+      "suffix": "+",
+      "label": "Projects Completed"
+    },
+    {
+      "value": 50,
+      "suffix": "+",
+      "label": "Happy Clients"
+    },
+    {
+      "value": 10,
+      "suffix": "+",
+      "label": "Brands Worked With"
+    }
+  ],
+  "_template": "about"
+}
