@@ -4,10 +4,13 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "build:dev": "vite build --mode development",
-    "preview": "vite preview",
+    "dev": "tinacms dev -c \"vite dev\"",
+    "build": "tinacms build && vite build",
+    "build:dev": "tinacms build && vite build --mode development",
+    "preview": "tinacms build && vite preview",
+    "tina:dev": "tinacms dev",
+    "tina:build": "tinacms build",
+    "postinstall": "node scripts/patch-tinacms.js",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
@@ -18,6 +21,7 @@
     "@tanstack/react-router": "^1.170.16",
     "@tanstack/react-start": "^1.168.26",
     "@tanstack/router-plugin": "^1.168.18",
+    "@tinacms/cli": "^2.6.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.575.0",
@@ -27,6 +31,7 @@
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.2.1",
+    "tinacms": "^3.12.1",
     "tw-animate-css": "^1.3.4",
     "vite-tsconfig-paths": "^6.0.2"
   },

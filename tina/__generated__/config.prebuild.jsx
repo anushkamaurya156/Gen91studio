@@ -3,10 +3,16 @@ import { defineConfig } from "tinacms";
 var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.HEAD || "main";
 var clientId = process.env.TINA_CLIENT_ID || process.env.VITE_TINA_CLIENT_ID || "47438203-cb62-46ae-bec9-2c4498c75c37";
 var token = process.env.TINA_TOKEN || process.env.VITE_TINA_TOKEN || "9a0ab6b6123f2094da5276b277a1d1194afc0726";
+var isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
 var config_default = defineConfig({
   branch,
   clientId,
   token,
+  admin: {
+    auth: {
+      useLocalAuth: isLocal
+    }
+  },
   build: {
     publicFolder: "public",
     outputFolder: "admin"

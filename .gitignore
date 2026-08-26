@@ -17,6 +17,7 @@ dist-ssr
 .nitro
 .env
 .env.*
+!.env.example
 *.local
 *.tif
 *.tiff

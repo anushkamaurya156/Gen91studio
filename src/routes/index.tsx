@@ -62,7 +62,9 @@ export const Route = createFileRoute("/")({
 function Index() {
   useEffect(() => {
     const scrollToHash = () => {
-      const hash = window.location.hash || (window.location.href.includes("#") ? window.location.href.split("#")[1] : "");
+      const hash =
+        window.location.hash ||
+        (window.location.href.includes("#") ? window.location.href.split("#")[1] : "");
       if (hash) {
         const id = hash.replace(/^#/, "");
         const el = document.getElementById(id);

@@ -2,15 +2,7 @@ import { motion } from "motion/react";
 import { STATS, SKILLS, EXPERTISE } from "./data";
 import { Counter, Reveal, SectionHeading, SectionLabel } from "./motion-kit";
 
-function SkillRow({
-  name,
-  level,
-  delay = 0,
-}: {
-  name: string;
-  level: number;
-  delay?: number;
-}) {
+function SkillRow({ name, level, delay = 0 }: { name: string; level: number; delay?: number }) {
   return (
     <motion.div
       initial="hidden"
@@ -104,7 +96,10 @@ export function About() {
 
 export function Skills() {
   return (
-    <section id="skills" className="section-pad relative bg-surface/40 overflow-hidden w-full max-w-full">
+    <section
+      id="skills"
+      className="section-pad relative bg-surface/40 overflow-hidden w-full max-w-full"
+    >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Skills & Expertise"
@@ -125,12 +120,7 @@ export function Skills() {
             </h3>
             <div className="grid gap-y-5 sm:gap-y-7">
               {SKILLS.map((skill, i) => (
-                <SkillRow
-                  key={skill.name}
-                  name={skill.name}
-                  level={skill.level}
-                  delay={i * 0.03}
-                />
+                <SkillRow key={skill.name} name={skill.name} level={skill.level} delay={i * 0.03} />
               ))}
             </div>
           </div>
@@ -143,12 +133,7 @@ export function Skills() {
             </h3>
             <div className="grid gap-y-5 sm:gap-y-7">
               {EXPERTISE.map((item, i) => (
-                <SkillRow
-                  key={item.name}
-                  name={item.name}
-                  level={item.level}
-                  delay={i * 0.03}
-                />
+                <SkillRow key={item.name} name={item.name} level={item.level} delay={i * 0.03} />
               ))}
             </div>
           </div>

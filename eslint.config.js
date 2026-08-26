@@ -15,6 +15,9 @@ export default tseslint.config(
       ".tanstack",
       "node_modules",
       "src/routeTree.gen.ts",
+      "tina/__generated__",
+      "public/admin",
+      "scripts",
     ],
   },
   {

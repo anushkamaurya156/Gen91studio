@@ -65,7 +65,10 @@ export function Experience() {
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="section-pad bg-surface/40 overflow-hidden w-full max-w-full">
+    <section
+      id="testimonials"
+      className="section-pad bg-surface/40 overflow-hidden w-full max-w-full"
+    >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Testimonials"
@@ -101,13 +104,12 @@ export function Testimonials() {
                       <span className="block truncate font-display text-xs sm:text-sm font-semibold">
                         {t.name}
                       </span>
-                      <span className="block truncate text-[11px] sm:text-xs text-muted-foreground">{t.title}</span>
+                      <span className="block truncate text-[11px] sm:text-xs text-muted-foreground">
+                        {t.title}
+                      </span>
                     </span>
                   </div>
-                  <span
-                    className="flex shrink-0 gap-0.5"
-                    aria-label={`${t.rating} out of 5`}
-                  >
+                  <span className="flex shrink-0 gap-0.5" aria-label={`${t.rating} out of 5`}>
                     {Array.from({ length: t.rating }).map((_, idx) => (
                       <Star key={idx} size={12} className="fill-primary text-primary" />
                     ))}

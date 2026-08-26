@@ -14,10 +14,18 @@ const token =
   process.env.VITE_TINA_TOKEN ||
   "9a0ab6b6123f2094da5276b277a1d1194afc0726";
 
+const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
+
 export default defineConfig({
   branch,
   clientId,
   token,
+
+  admin: {
+    auth: {
+      useLocalAuth: isLocal,
+    },
+  },
 
   build: {
     publicFolder: "public",

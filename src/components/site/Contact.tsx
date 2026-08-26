@@ -39,7 +39,10 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="section-pad relative bg-surface/40 overflow-hidden w-full max-w-full">
+    <section
+      id="contact"
+      className="section-pad relative bg-surface/40 overflow-hidden w-full max-w-full"
+    >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Contact"
@@ -64,23 +67,36 @@ export function Contact() {
                       <span className="block text-[0.65rem] font-semibold tracking-[0.2em] text-muted-foreground uppercase">
                         {label}
                       </span>
-                      <span className="block truncate text-xs sm:text-sm font-medium text-foreground">{value}</span>
+                      <span className="block truncate text-xs sm:text-sm font-medium text-foreground">
+                        {value}
+                      </span>
                     </span>
                   </div>
                 );
                 return href ? (
-                  <a key={label} href={href} target="_blank" rel="noreferrer noopener" className="min-w-0 block">
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="min-w-0 block"
+                  >
                     {inner}
                   </a>
                 ) : (
-                  <div key={label} className="min-w-0 block">{inner}</div>
+                  <div key={label} className="min-w-0 block">
+                    {inner}
+                  </div>
                 );
               })}
             </div>
           </Reveal>
 
           <Reveal delay={0.1} className="min-w-0 w-full">
-            <form onSubmit={onSubmit} className="glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 w-full min-w-0 max-w-full">
+            <form
+              onSubmit={onSubmit}
+              className="glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 w-full min-w-0 max-w-full"
+            >
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="min-w-0">
                   <label
