@@ -41,7 +41,10 @@ export default defineConfig({
             slugify: (values) => {
               return (
                 values?.slug ||
-                values?.name?.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") ||
+                values?.name
+                  ?.toLowerCase()
+                  .replace(/[^a-z0-9]+/g, "-")
+                  .replace(/^-|-$/g, "") ||
                 "new-category"
               );
             },
@@ -52,7 +55,8 @@ export default defineConfig({
             type: "string",
             name: "name",
             label: "Category Name",
-            description: "The display name for this discipline (e.g. 3D Modeling, Graphic Design, Brand Identity).",
+            description:
+              "The display name for this discipline (e.g. 3D Modeling, Graphic Design, Brand Identity).",
             isTitle: true,
             required: true,
           },
@@ -60,7 +64,8 @@ export default defineConfig({
             type: "string",
             name: "description",
             label: "Category Summary",
-            description: "A clear overview of the creative services and deliverables in this category.",
+            description:
+              "A clear overview of the creative services and deliverables in this category.",
             ui: {
               component: "textarea",
             },
@@ -70,14 +75,16 @@ export default defineConfig({
             type: "string",
             name: "tools",
             label: "Key Tools & Software",
-            description: "Add software or techniques used (e.g. Blender, 3ds Max, Photoshop, CorelDRAW).",
+            description:
+              "Add software or techniques used (e.g. Blender, 3ds Max, Photoshop, CorelDRAW).",
             list: true,
           },
           {
             type: "string",
             name: "icon",
             label: "Icon Name (Optional)",
-            description: "Lucide icon to display beside this category (e.g. Boxes, Sparkles, Wand2, Package, Palette).",
+            description:
+              "Lucide icon to display beside this category (e.g. Boxes, Sparkles, Wand2, Package, Palette).",
           },
           {
             type: "string",
@@ -114,7 +121,8 @@ export default defineConfig({
             type: "string",
             name: "title",
             label: "Project Title",
-            description: "Give this work item a clear name (e.g. 3D Modeling Exhibit 01 or Luxury Perfume Bottle Render).",
+            description:
+              "Give this work item a clear name (e.g. 3D Modeling Exhibit 01 or Luxury Perfume Bottle Render).",
             isTitle: true,
             required: true,
           },
@@ -122,7 +130,8 @@ export default defineConfig({
             type: "reference",
             name: "category",
             label: "Which category does this belong to?",
-            description: "Select which category folder this project should be grouped under from the dropdown.",
+            description:
+              "Select which category folder this project should be grouped under from the dropdown.",
             collections: ["category"],
             required: true,
           },
@@ -130,20 +139,23 @@ export default defineConfig({
             type: "image",
             name: "image",
             label: "Upload or choose a photo of this project",
-            description: "Click to upload a high-resolution photo, 3D render, or graphic design image for this exhibit.",
+            description:
+              "Click to upload a high-resolution photo, 3D render, or graphic design image for this exhibit.",
             required: true,
           },
           {
             type: "string",
             name: "alt",
             label: "Image Description for Accessibility (Alt Text)",
-            description: "Short description of what appears in the visual for search engines and accessibility.",
+            description:
+              "Short description of what appears in the visual for search engines and accessibility.",
           },
           {
             type: "string",
             name: "description",
             label: "Custom Project Notes (Optional)",
-            description: "Leave empty to use the category's standard description, or write a custom summary.",
+            description:
+              "Leave empty to use the category's standard description, or write a custom summary.",
             ui: {
               component: "textarea",
             },
@@ -152,7 +164,8 @@ export default defineConfig({
             type: "string",
             name: "tech",
             label: "Specific Tools Used (Optional)",
-            description: "Specific tools used for this project (defaults to category tools if left blank).",
+            description:
+              "Specific tools used for this project (defaults to category tools if left blank).",
             list: true,
           },
         ],
@@ -177,7 +190,8 @@ export default defineConfig({
                 type: "string",
                 name: "eyebrow",
                 label: "Top Eyebrow Text",
-                description: "Small tagline displayed above the main heading (e.g. Gen91Studio — Independent Design House).",
+                description:
+                  "Small tagline displayed above the main heading (e.g. Gen91Studio — Independent Design House).",
               },
               {
                 type: "string",
@@ -202,7 +216,8 @@ export default defineConfig({
                 type: "string",
                 name: "locationText",
                 label: "Location Tagline",
-                description: "Side banner location text (e.g. Based in Mumbai, Maharashtra, India).",
+                description:
+                  "Side banner location text (e.g. Based in Mumbai, Maharashtra, India).",
               },
               {
                 type: "image",
@@ -256,7 +271,8 @@ export default defineConfig({
                 type: "string",
                 name: "paragraphs",
                 label: "About Paragraphs",
-                description: "Add, edit, or reorder the paragraphs explaining your studio's story and craft.",
+                description:
+                  "Add, edit, or reorder the paragraphs explaining your studio's story and craft.",
                 list: true,
                 ui: { component: "textarea" },
               },
@@ -283,7 +299,8 @@ export default defineConfig({
                     type: "string",
                     name: "label",
                     label: "Stat Label Text",
-                    description: "Description below the number (e.g. Years Experience, Happy Clients).",
+                    description:
+                      "Description below the number (e.g. Years Experience, Happy Clients).",
                   },
                 ],
               },
@@ -511,7 +528,8 @@ export default defineConfig({
                 type: "string",
                 name: "summary",
                 label: "Professional Summary",
-                description: "Comprehensive summary of experience, capabilities, and software mastery.",
+                description:
+                  "Comprehensive summary of experience, capabilities, and software mastery.",
                 ui: { component: "textarea" },
               },
               {
@@ -609,7 +627,8 @@ export default defineConfig({
                 type: "string",
                 name: "languages",
                 label: "Languages Spoken",
-                description: "e.g. Marathi — Native, Hindi — Fluent, English — Working Proficiency.",
+                description:
+                  "e.g. Marathi — Native, Hindi — Fluent, English — Working Proficiency.",
                 list: true,
               },
             ],
@@ -689,7 +708,8 @@ export default defineConfig({
                     type: "string",
                     name: "label",
                     label: "Menu Label",
-                    description: "Text shown on the menu button (e.g. Studio, Expertise, Work, Contact).",
+                    description:
+                      "Text shown on the menu button (e.g. Studio, Expertise, Work, Contact).",
                   },
                   {
                     type: "string",
@@ -701,7 +721,8 @@ export default defineConfig({
                     type: "string",
                     name: "hash",
                     label: "Scroll Section ID",
-                    description: "Section HTML ID for smooth scrolling (e.g. about, skills, services, contact).",
+                    description:
+                      "Section HTML ID for smooth scrolling (e.g. about, skills, services, contact).",
                   },
                 ],
               },

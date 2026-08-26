@@ -3,10 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const filePath = path.resolve(
-  __dirname,
-  "../node_modules/@tinacms/graphql/dist/index.js"
-);
+const filePath = path.resolve(__dirname, "../node_modules/@tinacms/graphql/dist/index.js");
 
 if (fs.existsSync(filePath)) {
   let content = fs.readFileSync(filePath, "utf8");
@@ -27,10 +24,10 @@ if (fs.existsSync(filePath)) {
       }
     );`;
 
-  if (content.includes("path7.join(basePath, \"**\", `/*.${extension}`)")) {
+  if (content.includes('path7.join(basePath, "**", `/*.${extension}`)')) {
     content = content.replace(
       /const items = await fg\([\s\S]*?path7\.join\(basePath, "\*\*", `\/\*\.\$\{extension\}`\)[\s\S]*?ignore: \["\*\*\/node_modules\/\*\*"\][\s\S]*?\}\s*\);/,
-      replacement
+      replacement,
     );
     fs.writeFileSync(filePath, content, "utf8");
     console.log("Patched @tinacms/graphql for Windows path compatibility.");

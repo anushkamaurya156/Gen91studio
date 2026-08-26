@@ -184,12 +184,8 @@ const CATEGORY_DEFINITIONS = [
   },
 ];
 
-const categoryDetails = Object.fromEntries(
-  CATEGORY_DEFINITIONS.map((c) => [c.name, c])
-);
-const categoryToSlug = Object.fromEntries(
-  CATEGORY_DEFINITIONS.map((c) => [c.name, c.slug])
-);
+const categoryDetails = Object.fromEntries(CATEGORY_DEFINITIONS.map((c) => [c.name, c]));
+const categoryToSlug = Object.fromEntries(CATEGORY_DEFINITIONS.map((c) => [c.name, c.slug]));
 
 console.log("Writing categories...");
 CATEGORY_DEFINITIONS.forEach((cat) => {
@@ -201,11 +197,9 @@ console.log(`Saved ${CATEGORY_DEFINITIONS.length} categories.`);
 // Read raw manifest
 const manifestContent = fs.readFileSync(
   path.join(ROOT, "src/components/site/work-manifest-inline.ts"),
-  "utf8"
+  "utf8",
 );
-const manifestMatch = manifestContent.match(
-  /export const WORK_MANIFEST:.*?=\s*(\[[\s\S]*?\]);/
-);
+const manifestMatch = manifestContent.match(/export const WORK_MANIFEST:.*?=\s*(\[[\s\S]*?\]);/);
 const WORK_MANIFEST = eval(manifestMatch[1]);
 
 console.log(`Found ${WORK_MANIFEST.length} work items in manifest.`);
@@ -217,7 +211,8 @@ let totalItemsSaved = 0;
 WORK_MANIFEST.forEach((entry) => {
   const categoryName = entry.category;
   const fileName = entry.fileName;
-  const slug = categoryToSlug[categoryName] || categoryName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  const slug =
+    categoryToSlug[categoryName] || categoryName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
   const catDef = categoryDetails[categoryName];
 
   exhibitCounters[categoryName] = (exhibitCounters[categoryName] || 0) + 1;
@@ -253,7 +248,9 @@ WORK_MANIFEST.forEach((entry) => {
   totalItemsSaved++;
 });
 
-console.log(`Saved ${totalItemsSaved} work items across ${Object.keys(exhibitCounters).length} category folders.`);
+console.log(
+  `Saved ${totalItemsSaved} work items across ${Object.keys(exhibitCounters).length} category folders.`,
+);
 
 // Export site sections with _template
 const STATS = [
@@ -587,9 +584,9 @@ fs.writeFileSync(
       badgeCraftText: "Creative Craft",
     },
     null,
-    2
+    2,
   ),
-  "utf8"
+  "utf8",
 );
 
 fs.writeFileSync(
@@ -608,9 +605,9 @@ fs.writeFileSync(
       stats: STATS,
     },
     null,
-    2
+    2,
   ),
-  "utf8"
+  "utf8",
 );
 
 fs.writeFileSync(
@@ -627,9 +624,9 @@ fs.writeFileSync(
       expertise: EXPERTISE,
     },
     null,
-    2
+    2,
   ),
-  "utf8"
+  "utf8",
 );
 
 fs.writeFileSync(
@@ -645,9 +642,9 @@ fs.writeFileSync(
       experience: EXPERIENCE,
     },
     null,
-    2
+    2,
   ),
-  "utf8"
+  "utf8",
 );
 
 fs.writeFileSync(
@@ -661,15 +658,15 @@ fs.writeFileSync(
       testimonials: TESTIMONIALS,
     },
     null,
-    2
+    2,
   ),
-  "utf8"
+  "utf8",
 );
 
 fs.writeFileSync(
   path.join(siteSectionsDir, "resume.json"),
   JSON.stringify({ _template: "resume", ...RESUME_DATA }, null, 2),
-  "utf8"
+  "utf8",
 );
 
 fs.writeFileSync(
@@ -680,8 +677,7 @@ fs.writeFileSync(
       eyebrow: "Contact",
       title: "Let's build something",
       titleHighlight: "memorable",
-      subtitle:
-        "Tell us what you are building. We will help you find the right visual direction.",
+      subtitle: "Tell us what you are building. We will help you find the right visual direction.",
       email: CONTACT.email,
       phone: CONTACT.phone,
       whatsapp: CONTACT.whatsapp,
@@ -689,9 +685,9 @@ fs.writeFileSync(
       location: CONTACT.location,
     },
     null,
-    2
+    2,
   ),
-  "utf8"
+  "utf8",
 );
 
 fs.writeFileSync(
@@ -702,9 +698,9 @@ fs.writeFileSync(
       links: NAV_LINKS,
     },
     null,
-    2
+    2,
   ),
-  "utf8"
+  "utf8",
 );
 
 console.log("Migration complete!");
