@@ -1,4 +1,5 @@
 {
+  "_template": "hero",
   "eyebrow": "Gen91Studio — Independent Design House",
   "headingLine1": "VISUALS THAT",
   "headingHighlight": "STAND OUT",
@@ -7,6 +8,5 @@
   "profileImage": "/Images/profile.jpeg",
   "badgeYears": 10,
   "badgeYearsText": "Years of",
-  "badgeCraftText": "Creative Craft",
-  "_template": "hero"
+  "badgeCraftText": "Creative Craft"
 }

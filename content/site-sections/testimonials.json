@@ -1,4 +1,5 @@
 {
+  "_template": "testimonials",
   "eyebrow": "Testimonials",
   "title": "What clients",
   "titleHighlight": "say",
@@ -27,6 +28,5 @@
       "quote": "A rare designer who understands print craft and digital motion equally well. Every deliverable was flawless.",
       "rating": 5
     }
-  ],
-  "_template": "testimonials"
+  ]
 }

@@ -201,10 +201,10 @@ export type DocumentNode = Category | WorkItem | SiteSectionHero | SiteSectionAb
 export type Category = Node & Document & {
   __typename?: 'Category';
   name: Scalars['String']['output'];
-  slug: Scalars['String']['output'];
   description: Scalars['String']['output'];
   tools?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
   icon?: Maybe<Scalars['String']['output']>;
+  slug?: Maybe<Scalars['String']['output']>;
   sortOrder?: Maybe<Scalars['Float']['output']>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
@@ -230,10 +230,10 @@ export type NumberFilter = {
 
 export type CategoryFilter = {
   name?: InputMaybe<StringFilter>;
-  slug?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   tools?: InputMaybe<StringFilter>;
   icon?: InputMaybe<StringFilter>;
+  slug?: InputMaybe<StringFilter>;
   sortOrder?: InputMaybe<NumberFilter>;
 };
 
@@ -260,7 +260,6 @@ export type WorkItem = Node & Document & {
   alt?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   tech?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  fileName?: Maybe<Scalars['String']['output']>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -284,7 +283,6 @@ export type WorkItemFilter = {
   alt?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   tech?: InputMaybe<StringFilter>;
-  fileName?: InputMaybe<StringFilter>;
 };
 
 export type WorkItemConnectionEdges = {
@@ -737,10 +735,10 @@ export type DocumentMutation = {
 
 export type CategoryMutation = {
   name?: InputMaybe<Scalars['String']['input']>;
-  slug?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   tools?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   icon?: InputMaybe<Scalars['String']['input']>;
+  slug?: InputMaybe<Scalars['String']['input']>;
   sortOrder?: InputMaybe<Scalars['Float']['input']>;
 };
 
@@ -751,7 +749,6 @@ export type WorkItemMutation = {
   alt?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   tech?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  fileName?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type SiteSectionHeroMutation = {

@@ -95,10 +95,10 @@ union DocumentNode = Category | WorkItem | SiteSectionHero | SiteSectionAbout | 
 
 type Category implements Node & Document {
   name: String!
-  slug: String!
   description: String!
   tools: [String]
   icon: String
+  slug: String
   sortOrder: Float
   id: ID!
   _sys: SystemInfo!
@@ -124,10 +124,10 @@ input NumberFilter {
 
 input CategoryFilter {
   name: StringFilter
-  slug: StringFilter
   description: StringFilter
   tools: StringFilter
   icon: StringFilter
+  slug: StringFilter
   sortOrder: NumberFilter
 }
 
@@ -151,7 +151,6 @@ type WorkItem implements Node & Document {
   alt: String
   description: String
   tech: [String]
-  fileName: String
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -175,7 +174,6 @@ input WorkItemFilter {
   alt: StringFilter
   description: StringFilter
   tech: StringFilter
-  fileName: StringFilter
 }
 
 type WorkItemConnectionEdges {
@@ -536,10 +534,10 @@ input DocumentMutation {
 
 input CategoryMutation {
   name: String
-  slug: String
   description: String
   tools: [String]
   icon: String
+  slug: String
   sortOrder: Float
 }
 
@@ -550,7 +548,6 @@ input WorkItemMutation {
   alt: String
   description: String
   tech: [String]
-  fileName: String
 }
 
 input SiteSectionHeroMutation {

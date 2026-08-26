@@ -1,4 +1,5 @@
 {
+  "_template": "navigation",
   "links": [
     {
       "label": "Studio",
@@ -35,6 +36,5 @@
       "href": "/#contact",
       "hash": "contact"
     }
-  ],
-  "_template": "navigation"
+  ]
 }

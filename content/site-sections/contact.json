@@ -1,4 +1,5 @@
 {
+  "_template": "contact",
   "eyebrow": "Contact",
   "title": "Let's build something",
   "titleHighlight": "memorable",
@@ -7,6 +8,5 @@
   "phone": "+91 89999 01362",
   "whatsapp": "https://wa.me/918999901362",
   "linkedin": "https://www.linkedin.com/in/arvind-maurya-86335240a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-  "location": "Laxmibahen Chheda Marg, Nalasopara West, Maharashtra, India",
-  "_template": "contact"
+  "location": "Laxmibahen Chheda Marg, Nalasopara West, Maharashtra, India"
 }

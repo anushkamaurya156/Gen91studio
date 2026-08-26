@@ -1,4 +1,5 @@
 {
+  "_template": "skills",
   "eyebrow": "Skills & Expertise",
   "title": "Craft, technology, and",
   "titleHighlight": "ideas in motion",
@@ -106,6 +107,5 @@
       "name": "Motion Graphics",
       "level": 65
     }
-  ],
-  "_template": "skills"
+  ]
 }

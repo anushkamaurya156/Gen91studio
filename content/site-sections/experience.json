@@ -1,4 +1,5 @@
 {
+  "_template": "experience",
   "eyebrow": "Experience",
   "title": "Ten years,",
   "titleHighlight": "ten studios",
@@ -64,6 +65,5 @@
       "duration": "1.2 Years",
       "achievement": "Created branding, logo designs, and print media graphics for retail and commercial clients."
     }
-  ],
-  "_template": "experience"
+  ]
 }

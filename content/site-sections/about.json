@@ -1,4 +1,5 @@
 {
+  "_template": "about",
   "label": "About Gen91studio",
   "titleLine1": "A decade turning",
   "titleHighlight": "briefs into brands",
@@ -28,6 +29,5 @@
       "suffix": "+",
       "label": "Brands Worked With"
     }
-  ],
-  "_template": "about"
+  ]
 }

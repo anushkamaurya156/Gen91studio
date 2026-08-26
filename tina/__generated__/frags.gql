@@ -1,10 +1,10 @@
 fragment CategoryParts on Category {
   __typename
   name
-  slug
   description
   tools
   icon
+  slug
   sortOrder
 }
 
@@ -15,10 +15,10 @@ fragment WorkItemParts on WorkItem {
     ... on Category {
       __typename
       name
-      slug
       description
       tools
       icon
+      slug
       sortOrder
     }
     ... on Document {
@@ -38,7 +38,6 @@ fragment WorkItemParts on WorkItem {
   alt
   description
   tech
-  fileName
 }
 
 fragment SiteSectionParts on SiteSection {
