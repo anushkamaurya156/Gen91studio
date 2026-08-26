@@ -21,12 +21,6 @@ export default defineConfig({
   clientId,
   token,
 
-  admin: {
-    auth: {
-      useLocalAuth: isLocal,
-    },
-  },
-
   build: {
     publicFolder: "public",
     outputFolder: "admin",

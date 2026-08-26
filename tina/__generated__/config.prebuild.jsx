@@ -8,11 +8,6 @@ var config_default = defineConfig({
   branch,
   clientId,
   token,
-  admin: {
-    auth: {
-      useLocalAuth: isLocal
-    }
-  },
   build: {
     publicFolder: "public",
     outputFolder: "admin"

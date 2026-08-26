@@ -83,7 +83,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "theme-color", content: "#0d0b0a" },
       { property: "og:site_name", content: "Gen91 Studio" },
       { property: "og:type", content: "website" },
+      { property: "og:title", content: "Gen91Studio — Premium Visual Design House" },
+      {
+        property: "og:description",
+        content:
+          "Gen91Studio creates premium visual design, branding, 3D and content for ambitious brands.",
+      },
+      { property: "og:image", content: "/og-image.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Gen91Studio — Premium Visual Design House" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Gen91Studio — Premium Visual Design House" },
+      {
+        name: "twitter:description",
+        content:
+          "Gen91Studio creates premium visual design, branding, 3D and content for ambitious brands.",
+      },
+      { name: "twitter:image", content: "/og-image.jpg" },
     ],
     links: [
       {
